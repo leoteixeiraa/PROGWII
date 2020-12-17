@@ -17,7 +17,6 @@ Esta tarefa está minimamente pronta. Você precisa:
 
 
 
-```
 function embaralharArray(meuArray) {
   for (
     var j, x, i = meuArray.length;
@@ -29,4 +28,3 @@ function embaralharArray(meuArray) {
   );
   return meuArray;
 }
-```

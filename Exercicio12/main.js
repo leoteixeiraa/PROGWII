@@ -27,7 +27,43 @@ const questoes = [
       { id: 4, texto: "const idade = 18;", correta: false },
     ],
   },
-  // Crie pelo menos mais 3 questões sobre javascript. Cada questão precisa ter 1 alternativa correta
+  {
+    id: 3,
+    descricao: "Qual a montanha mais alta do Brasil?",
+    nivel: "Fácil",
+    alternativas: [
+      { id: 1, texto: 'Pico da Neblina', correta: true },
+      { id: 2, texto: "Pico Paraná", correta: false },
+      { id: 3, texto: 'Monte Roraima', correta: false },
+      { id: 4, texto: "Pico Maior de Friburgo", correta: false },
+    ],
+  },
+
+  {
+    id: 4,
+    descricao: "Qual a velocidade da luz?",
+    nivel: "Fácil",
+    alternativas: [
+      { id: 1, texto: '300 000 000 metros por segundo (m/s)', correta: false },
+      { id: 2, texto: "150 000 000 metros por segundo (m/s)", correta: false },
+      { id: 3, texto: '199 792 458 metros por segundo (m/s)', correta: false },
+      { id: 4, texto: "299 792 458 metros por segundo (m/s)", correta: true },
+    ],
+  },
+
+  {
+    id: 5,
+    descricao: "Em qual local da Ásia o português é língua oficial?",
+    nivel: "Fácil",
+    alternativas: [
+      { id: 1, texto: 'Índia', correta: false },
+      { id: 2, texto: "Filipinas", correta: false },
+      { id: 3, texto: 'Moçambique', correta: false },
+      { id: 4, texto: "Macau", correta: true },
+    ],
+  }
+
+
 ];
 
 const proximaQuestao = function () {
@@ -126,4 +162,15 @@ document.querySelector("form").addEventListener("submit", function (event) {
 function limpar() {
   questao_tag.innerHTML = "";
   alternativas_tag.innerHTML = "";
+}
+function embaralharArray(meuArray) {
+  for (
+    var j, x, i = meuArray.length;
+    i;
+    j = Math.floor(Math.random() * i),
+    x = meuArray[--i],
+    meuArray[i] = meuArray[j],
+    meuArray[j] = x
+  );
+  return meuArray;
 }

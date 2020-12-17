@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,44 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png">
     <link rel="manifest" href="./public/manifest.json">
     <title>Exercício</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
+    <h1>Calculadora</h1>
+
     <div class="mensagens"></div>
 
-    <div class="formulario">
-        <!-- Adicione os Campos do Formulário -->
-    </div>
-    
-    <div class="resultados">
-        <p class="soma"></p>
-        <p class="sub"></p>
-        <p class="mult"></p>
-        <p class="div"></p>
-        <p class="resto"></p>
-    </div>
+    <div id="principal">
+        <form id="form">
+            <input id="valorX" type="text" size="15" />
+            <select id="operacao" onblur="opcao()">
+                <option id="valor" value="">escolha uma opção</option>
+                <option id="valor" value="1">Somar</option>
+                <option id="valor" value="2">Subtrair</option>
+                <option id="valor" value="3">Dividir</option>
+                <option id="valor" value="4">Multiplicar</option>
+            </select>
+            <input id="valorY" type="text" size="15" onblur="opcao()" />
+            <b>=</b>
+            <input id="resultado" type="text" size="15" disabled="true" />
+            <button id="calcular" type="button" value="Calcular" onclick="opcao()"> Calcular</button>
+            <input id="limpar" type="reset" value="Resetar" />
 
-    <script src="main.js" type="text/javascript"></script>
+
+
+            <div class="Resultados">
+
+                <p id="soma"></p>
+                <p id="sub"></p>
+                <p id="mul"></p>
+                <p id="div"></p>
+                <p id="resto"></p>
+            </div>
+    </div>
+    </form>
+    <script src="main.js"></script>
 </body>
+
 </html>

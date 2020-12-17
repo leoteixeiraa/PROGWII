@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+.btn{
+	font-weight: bold;
+	padding: 10px;
+	
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	color: #330000;
+}
+.btn:hover{
+	color: #330000;
+	background-color: #FFFFFF;
+	/*CSS 3*/
+	border-radius: 10px 0px 10px 0px;
+}
+h3,p{
+    color: white;
+}
